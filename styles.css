@@ -1,0 +1,316 @@
+*{  
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased; 
+    /* i used this property for font smoothing  */
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #EAECEE;
+   
+
+}
+.head-section{
+    box-shadow: rgba(12, 82, 89, 0.35) 0px 5px 15px;
+}
+.container{
+    max-width: 90%; 
+    /* max width takes 90% witdh of body */
+    margin: 0 auto;
+    
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    
+}
+
+nav .logo-section{
+    display: flex;
+    align-items: center;
+
+}
+nav .logo-section img{
+    width: 20px;
+
+}
+.search-block{
+   
+   border: 2px solid #00e0d1;
+   padding: 0.5rem 0.8rem;
+   margin-left: 1.4rem;
+   border-radius: 4px;
+   display: flex;
+   align-items: center;
+
+}
+.search-block input{
+    background: transparent;
+}
+.hamburger{
+    cursor: pointer;
+}
+
+nav input{
+    border: none;
+    min-width: 190px;
+    
+}
+nav input:focus{
+    outline: none;
+}
+nav ul{
+    display: none;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    padding: 1rem;
+    background-color: whitesmoke;
+    margin-top: 1rem;
+}
+nav ul.show{
+    display: block;
+}
+nav ul li{
+    padding-bottom: 1rem;
+}
+nav ul li:last-child{
+    padding-bottom: 0;
+}
+nav ul li a{
+    color:#596172;
+    text-decoration: none;
+    
+}
+nav ul li a:hover{
+    color:rgb(50, 237, 166);
+    font-weight: bold;
+    font-size:large;
+}
+
+span{
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+.hero{
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.6)),url('../img/mobile-img.png'); */
+    min-height: calc(100vh - 65px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom; 
+    /*here we use background-position to  adjust the image from bottom to top  */
+    display: flex;
+    align-items: center;
+    
+}
+
+.hero-text-block{
+    width: 90%;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+.hero-text-block h1{
+     font-size: 3rem;
+     line-height: 1.3;
+     margin-bottom: 2rem;
+     font-weight: 700;
+}
+.hero-img-block img{
+    width: 95%;
+}
+
+.hero-btn-block{
+    margin-top: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+}
+.hero-btn-block .btn{
+    color:#fff;
+    border:none;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+.hero-btn-block .btn-primary{
+    background: #44d496; 
+    box-shadow: rgb(62, 255, 188) 0px 5px 15px;
+}
+.hero-btn-block .btn-secondary{
+    background: #C1C8D7;
+}
+
+.apartments .section-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+.apartments .section-heading h2{
+    font-weight: 400;
+    color: #2B313D;
+    font-size: 1.2rem;
+}
+.apartments .section-heading h2 span{
+    color: #949fb7;
+}
+.apartments .section-heading a{
+    color: #596172;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.apartments-list-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+section{
+    padding: 2rem 0;
+
+}
+
+.apartments-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.apartments-meta span{
+    color: #596172;
+    font-size: 0.8rem;
+    padding-top: 0.4rem;
+
+}
+
+.apartments-card{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 4px;
+    padding: 0.5rem;
+   
+}
+.apartments-card img{
+    width: 100%;
+}
+.apartments-title{
+    margin-top: 1rem;
+}
+
+.apartments-title a{
+    color: #2B313D;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+@media(max-width:764px){
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    /* .hero-img-block{
+        display: none;
+    } */
+    .hero-text-block{
+        /* width: 45%; */
+        margin-left: 5%;
+
+    }
+}
+@media(min-width:765px){
+    nav .hamburger{
+        display: none;
+    }
+    nav ul.nav-list{
+        width: auto;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        margin-top: 0;
+        padding: 0;
+    }
+    nav ul.nav-list li{
+        padding-bottom: 0;
+        margin-left: 1.8rem;
+    }
+    nav{
+        flex-wrap: nowrap;
+    }
+    .hero-text-block h1{
+        width: 60%;
+    }
+    .hero-text-block{
+        /* width: 45%; */
+        margin-left: 5%;
+
+    }
+
+}
+
+
+
+
+
+
+@media(min-width: 992px){
+    .hero{
+        min-height: auto;
+    }
+    .hero-text-block{
+        width: 45%;
+        margin-left: 5%;
+
+    }
+    .hero-img-block{
+        display: block;
+        width: 55%;
+        margin-left: 2rem;
+    }
+    .hero-img-block img{
+        height: 100%;
+        width: 100%;
+    }
+    .hero-text-block h1{
+        
+        font-weight: 400;
+        width: 100%;
+    }
+    .search-block.search-block-hero input{
+        color: #949fb7;
+    }
+    .search-block.search-block-hero ::placeholder{
+        color: #949fb7;
+    }
+    .apartments-list-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+}
+@media(min-width: 1192px){
+    html{
+        font-size: 18px;
+    }
+ 
+    .apartments-list-wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
